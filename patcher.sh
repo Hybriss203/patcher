@@ -1,14 +1,11 @@
 #!/bin/sh
 
 # Apply these patches before compilation:
-CUSTOM=$PWD/patcher/custom
-SULTAN=$PWD/patcher/sultan
+PATCHES=$PWD/patcher/patches
 
 # Clean up first
 git -C build				clean -dfqx
 git -C build				reset -q --hard
-git -C device/oppo/common		clean -dfqx
-git -C device/oppo/common		reset -q --hard
 git -C frameworks/av			clean -dfqx
 git -C frameworks/av			reset -q --hard
 git -C frameworks/base			clean -dfqx
@@ -26,26 +23,23 @@ git -C system/core			reset -q --hard
 git -C vendor/cm			clean -dfqx
 git -C vendor/cm			reset -q --hard
 
-### Sultan's patches
-git -C build				apply $SULTAN/build0.patch
-git -C device/oppo/common		apply $SULTAN/device-oppo-common0.patch
-git -C frameworks/av			apply $SULTAN/frameworks-av0.patch
-git -C frameworks/base			apply $SULTAN/frameworks-base0.patch
-git -C frameworks/base			apply $SULTAN/frameworks-base1.patch
-git -C frameworks/base			apply $SULTAN/frameworks-base2.patch
-git -C frameworks/base			apply $SULTAN/frameworks-base3.patch
-git -C frameworks/base			apply $SULTAN/frameworks-base4.patch
-git -C frameworks/native		apply $SULTAN/frameworks-native0.patch
-git -C packages/apps/LockClock		apply $SULTAN/packages-apps-LockClock0.patch
-git -C packages/apps/Settings		apply $SULTAN/packages-apps-Settings0.patch
-git -C system/core			apply $SULTAN/system-core0.patch
-git -C system/core			apply $SULTAN/system-core1.patch
-git -C system/core			apply $SULTAN/system-core2.patch
-git -C vendor/cm			apply $SULTAN/vendor-cm0.patch
-git -C vendor/cm			apply $SULTAN/vendor-cm1.patch
-
-### Custom patches
-git -C frameworks/av			apply $CUSTOM/frameworks-av0.patch
-git -C packages/apps/Gallery2		apply $CUSTOM/packages-apps-Gallery20.patch
-git -C packages/apps/Gallery2		apply $CUSTOM/packages-apps-Gallery21.patch
-git -C packages/apps/Gallery2		apply $CUSTOM/packages-apps-Gallery22.patch
+### Patches
+git -C build				apply $PATCHES/build0.patch
+git -C frameworks/av			apply $PATCHES/frameworks-av0.patch
+git -C frameworks/av			apply $PATCHESframeworks-av1.patch
+git -C frameworks/base			apply $PATCHES/frameworks-base0.patch
+git -C frameworks/base			apply $PATCHES/frameworks-base1.patch
+git -C frameworks/base			apply $PATCHES/frameworks-base2.patch
+git -C frameworks/base			apply $PATCHES/frameworks-base3.patch
+git -C frameworks/base			apply $PATCHES/frameworks-base4.patch
+git -C frameworks/native		apply $PATCHES/frameworks-native0.patch
+git -C packages/apps/Gallery2		apply $PATCHES/packages-apps-Gallery20.patch
+git -C packages/apps/Gallery2		apply $PATCHES/packages-apps-Gallery21.patch
+git -C packages/apps/Gallery2		apply $PATCHES/packages-apps-Gallery22.patch
+git -C packages/apps/LockClock		apply $PATCHES/packages-apps-LockClock0.patch
+git -C packages/apps/Settings		apply $PATCHES/packages-apps-Settings0.patch
+git -C system/core			apply $PATCHES/system-core0.patch
+git -C system/core			apply $PATCHES/system-core1.patch
+git -C system/core			apply $PATCHES/system-core2.patch
+git -C vendor/cm			apply $PATCHES/vendor-cm0.patch
+git -C vendor/cm			apply $PATCHES/vendor-cm1.patch
