@@ -26,7 +26,7 @@ git -C vendor/cm			reset -q --hard
 ### Patches
 git -C build				apply $PATCHES/build0.patch
 git -C frameworks/av			apply $PATCHES/frameworks-av0.patch
-git -C frameworks/av			apply $PATCHESframeworks-av1.patch
+git -C frameworks/av			apply $PATCHES/frameworks-av1.patch
 git -C frameworks/base			apply $PATCHES/frameworks-base0.patch
 git -C frameworks/base			apply $PATCHES/frameworks-base1.patch
 git -C frameworks/base			apply $PATCHES/frameworks-base2.patch
