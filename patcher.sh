@@ -4,7 +4,7 @@
 
 ROM_TREE=$PWD
 PATCHER_PATH=$ROM_TREE/patcher
-CUSTOM=$PATCHER_PATH/patch
+CUSTOM=$PATCHER_PATH/patches
 
 APN_LIST_URL=https://raw.githubusercontent.com/CyanogenMod/android_vendor_cm/cm-13.0/prebuilt/common/etc/apns-conf.xml
 
