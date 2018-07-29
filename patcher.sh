@@ -20,8 +20,8 @@ git -C packages/apps/Settings		clean -dfqx
 git -C packages/apps/Settings		reset -q --hard
 git -C system/core			clean -dfqx
 git -C system/core			reset -q --hard
-git -C vendor/cm			clean -dfqx
-git -C vendor/cm			reset -q --hard
+git -C vendor/rr			clean -dfqx
+git -C vendor/rr			reset -q --hard
 
 ### Patches
 git -C build				apply $PATCHES/build0.patch
