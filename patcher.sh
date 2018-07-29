@@ -41,5 +41,5 @@ git -C packages/apps/Settings		apply $PATCHES/packages-apps-Settings0.patch
 git -C system/core			apply $PATCHES/system-core0.patch
 git -C system/core			apply $PATCHES/system-core1.patch
 git -C system/core			apply $PATCHES/system-core2.patch
-git -C vendor/cm			apply $PATCHES/vendor-cm0.patch
-git -C vendor/cm			apply $PATCHES/vendor-cm1.patch
+git -C vendor/rr			apply $PATCHES/vendor-cm0.patch
+git -C vendor/rr			apply $PATCHES/vendor-cm1.patch
